@@ -1,0 +1,13 @@
+.title__container {
+  background-color: #0a0b0b;
+  padding: 9px 0 8px;
+  box-sizing: border-box;
+}
+.title__container__text {
+  font-family: "DIN Next W01 Medium", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fff;
+  padding: 8px;
+}
