@@ -1,0 +1,68 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* width: 100%;
+  height: 100%; */
+  background-color: #1d1e1f;
+  /* border: 1px solid transparent; */
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  /* padding: 20px; */
+  margin: 20px;
+  overflow: hidden;
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.written-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%;
+  height: 100%; */
+  display: block;
+  padding: 10px 25px 35px 18px;
+}
+
+.search-bar {
+  background-color: #1d1e1f;
+  border-radius: 5px;
+  display: block;
+  padding: 10px;
+  margin: 10px;
+  /* height: 5em; */
+}
+.search-input {
+  background-color: #1d1e1f;
+  border: 1px solid #1d1e1f;
+  border-radius: 5px;
+  color: white;
+  display: block;
+  font-size: 1.8rem;
+  /* padding: 10px; */
+  margin: 2px;
+  margin-top: 5px;
+
+  width: 100%;
+}
+.underline {
+  border-bottom: 2px solid black;
+  padding: 0 0 1em 0;
+}
+/* .magnifying{
+  width: 30px;
+  float: right;
+  color: white;
+  top: 50px;
+} */
