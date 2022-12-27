@@ -1,7 +1,26 @@
-import './RelatedCards.module.css';
+import classes from "./RelatedCards.module.css";
+import { relatedCharactersImg } from "../utils/RelatedImages";
+import { useState } from "react";
+import RelatedCharImage from "./RelatedCharImage";
+
 function RelatedCards() {
-    
-  return <div></div>;
+  const [relatedChar, setRelatedChar] = useState(relatedCharactersImg);
+
+  return (
+    <div className={classes.card}>
+      <div className={classes.character}>
+        {relatedChar.map((related) => {
+          return (
+            <div key={related.id} className="card">
+              <div className="image-card">
+                <RelatedCharImage related={related}></RelatedCharImage>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
 
 export default RelatedCards;

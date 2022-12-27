@@ -1,6 +1,7 @@
 import classes from "./IndividualDatabankBase.module.css";
 import IndividualDatabankCard from "./IndividualDatabankCard";
 import LongDividerLine from "./LongDividerLine";
+import RelatedCards from "./RelatedCards";
 
 function IndividualDatabankBase() {
   return (
@@ -22,6 +23,7 @@ function IndividualDatabankBase() {
       <div className={classes.related}>
         <h3>Related</h3>
         <LongDividerLine></LongDividerLine>
+        <RelatedCards></RelatedCards>
       </div>
     </>
   );
