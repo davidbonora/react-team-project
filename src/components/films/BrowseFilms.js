@@ -4,7 +4,12 @@ function BrowseFilms() {
   return (
     <>
       <div className={classes.browse__container}>
-        <h2 className={classes.browse__text}>Browse Films</h2>
+        <div className={classes.browse__title}>
+          <span className={classes.browse__text}>Browse Films</span>
+        </div>
+        <div>
+          <hr className={classes.browse__line} />
+        </div>
       </div>
     </>
   );

@@ -11,3 +11,9 @@
   width: 100%;
   background-color: #000000;
 }
+.browse__line {
+  width: 100%;
+  background-color: #48494a;
+  height: 2px;
+  left: 8px;
+}
