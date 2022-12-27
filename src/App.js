@@ -33,9 +33,11 @@ function App() {
   }, []);
   return (
     <Routes>
-      <Route path='/' element={<DataBank characters ={characters}/>}/>
-              
-      <Route path=':key' element={<OliversComponent characters={characters}/>} />
+      <Route path='/' element={<DataBank characters={characters} />} />
+      <Route
+        path=':key'
+        element={<OliversComponent characters={characters} />}
+      />
     </Routes>
   );
 }

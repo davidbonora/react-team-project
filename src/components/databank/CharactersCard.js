@@ -1,13 +1,14 @@
 import classes from "./CharacterCard.module.css";
 import { useNavigate } from "react-router-dom";
-const CharactersCard = ({ img, name, id}) => {
+const CharactersCard = ({ img, name, id }) => {
   const navigate = useNavigate();
   return (
-    <div className={classes["character-card"]}
-    onClick={() => {
-      navigate(`/${id}`);
-      console.log("redirecting");
-    }}
+    <div
+      className={classes["character-card"]}
+      onClick={() => {
+        navigate(`/${id}`);
+        console.log("redirecting");
+      }}
     >
       <div className={classes["character-img"]}>
         <img src={img} alt='' />
@@ -16,7 +17,7 @@ const CharactersCard = ({ img, name, id}) => {
         <h5>{name}</h5>
         <div className={classes.trapezium}></div>
       </div>
-     </div>
+    </div>
   );
 };
 

@@ -1,15 +1,8 @@
 import classes from "./DataBank.module.css";
-
-import {  Outlet } from "react-router-dom";
 import CharactersCard from "./CharactersCard";
 import SearchBar from "./SearchBar";
 
-
-
-
-const DataBank = ({characters}) => {
-  
-
+const DataBank = ({ characters }) => {
   return (
     <>
       <section className={classes["databank-container"]}>
@@ -21,7 +14,7 @@ const DataBank = ({characters}) => {
           <div className={classes["short-line"]}></div>
           <div className={classes["long-line"]}></div>
         </div>
-       
+
         {Object.keys(characters).map((key) => (
           <CharactersCard
             key={key}
@@ -30,7 +23,6 @@ const DataBank = ({characters}) => {
             name={characters[key].name}
           />
         ))}
-         
       </section>
     </>
   );
