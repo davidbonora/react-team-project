@@ -1,0 +1,33 @@
+.databank-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    overflow-x: hidden;
+}
+
+.section-heading{
+    color: #ccc;
+    text-align: left;
+    width: 90%;
+    padding: .5rem;
+    margin-top: 1rem;
+}
+
+.short-line{
+    width:2%;
+    background-color: #1d1e1f;
+    height: 3px;
+    border-bottom: 1px solid black;
+    display: inline-block;
+    margin-right: .3rem;
+}
+
+.long-line{
+    width:95%;
+    background-color: #1d1e1f;
+    height: 3px;
+    border-bottom: 1px solid black;
+    display: inline-block;
+}

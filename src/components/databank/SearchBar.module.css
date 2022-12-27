@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "Matterhorn";
+    src: url("../../assets/font_Matterhorn/Matterhorn\ Normal.ttf");
+  }
+
+.form{
+    background-color: #1d1e1f;
+    width: 90%;
+    padding :.6rem;
+    border-radius: .3rem;
+    position: relative;
+}
+
+.form input{
+    background-color: #1d1e1f;
+    font-weight: bold;
+    border-bottom: black .5px solid;
+    padding: .5rem;
+    width:100%;
+    color:#ccc;
+    font-size: 1.2rem;
+}
+
+.form svg{
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    color: #ccc;
+    font-family: "Matterhorn";
+}

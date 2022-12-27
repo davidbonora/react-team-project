@@ -1,39 +1,39 @@
-import { useEffect, useState } from "react";
+import classes from "./DataBank.module.css";
+
+import {  Outlet } from "react-router-dom";
 import CharactersCard from "./CharactersCard";
+import SearchBar from "./SearchBar";
 
-const API_URL =
-  "https://starwars-databank-default-rtdb.europe-west1.firebasedatabase.app/characters.json";
 
-const DataBank = () => {
-  const [characters, setCharacters] = useState({});
-  const [pending, setPending] = useState(true);
-  const [fetchError, setFetchError] = useState(null);
 
-  useEffect(() => {
-    const fetchCharacters = async () => {
-      try {
-        const response = await fetch(API_URL);
-        if (!response.ok) throw new Error("Did not receive expected data");
-        const listCharacters = await response.json();
-        console.log(listCharacters);
-        setCharacters(listCharacters);
-        setFetchError(null);
-      } catch (error) {
-        setFetchError(error.message);
-      } finally {
-        setPending(false);
-              }
-    };
 
-    (async () => fetchCharacters())();
-  }, []);
+const DataBank = ({characters}) => {
+  
 
-  return <div>
-
-{Object.keys(characters).map((key) => (<CharactersCard key={key} id={key} img={characters[key].image} name={characters[key].name}/>
-))
-  }
-  </div>;
+  return (
+    <>
+      <section className={classes["databank-container"]}>
+        <SearchBar
+        // characters ={characters} setCharacters={setCharacters} content ={content} setContent={setContent}
+        />
+        <div className={classes["section-heading"]}>
+          <h3>Andor</h3>
+          <div className={classes["short-line"]}></div>
+          <div className={classes["long-line"]}></div>
+        </div>
+       
+        {Object.keys(characters).map((key) => (
+          <CharactersCard
+            key={key}
+            id={key}
+            img={characters[key].thumb}
+            name={characters[key].name}
+          />
+        ))}
+         
+      </section>
+    </>
+  );
 };
 
 export default DataBank;
