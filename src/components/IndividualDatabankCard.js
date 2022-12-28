@@ -1,5 +1,8 @@
 import classes from "./IndividualDatabankCard.module.css";
 import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+// import { faMagni } from '@fortawesome/free-regular-svg-icons'
 
 let BASE_URL = {
   characters:
@@ -64,17 +67,23 @@ function IndividualDatabankCard() {
 
   return (
     <div>
-      {/* <div className={classes["search-bar"]}>
-        <input
-          className={classes["search-input"]}
-          type="text"
-          placeholder="Databank"
-          onChange={handleChange}
-          value={searchInput}
-        />
-      
-        <div className={classes.underline}></div>
-      </div>
+     <div className={classes["search-bar-bg"]}>
+        <div className={classes["search-bar"]}>
+          <input
+            className={classes["search-input"]}
+            type="text"
+            placeholder="Databank"
+            onChange={handleChange}
+            value={searchInput}
+          />
+          <FontAwesomeIcon size="2x"
+            className={classes.magnifying}
+            icon={faMagnifyingGlass}
+          />
+  
+        </div>
+          <div className={classes.underline}></div>
+     </div>
       <div className={classes.card}>
         <div className={classes.character}>
           <img
@@ -86,8 +95,9 @@ function IndividualDatabankCard() {
             <h4>{characters[0].name}</h4>
             <p>{characters[0].description}</p>
           </div>
+          {/* <div className={classes.dent}>&#x2B22;</div> */}
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

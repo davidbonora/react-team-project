@@ -1,9 +1,9 @@
-import davo from "../assets/img/relatedImages/davo-sculding.jpeg";
-import leida from "../assets/img/relatedImages/leida-mothoma.jpeg";
-import mom from "../assets/img/relatedImages/mom-mothoma.jpeg";
-import runay from "../assets/img/relatedImages/runay-sculdun.jpeg";
-import tai from "../assets/img/relatedImages/tai-colma.jpeg";
-import vel from "../assets/img/relatedImages/vel-sartha.jpeg";
+import davo from "../assets/img/relatedImages/davo-sculding.jpg";
+import leida from "../assets/img/relatedImages/leida-mothoma.jpg";
+import mom from "../assets/img/relatedImages/mom-mothoma.jpg";
+import runay from "../assets/img/relatedImages/runay-sculdun.jpg";
+import tai from "../assets/img/relatedImages/tai-colma.jpg";
+import vel from "../assets/img/relatedImages/vel-sartha.jpg";
 
 export const relatedCharactersImg = [
   {

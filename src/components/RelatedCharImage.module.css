@@ -1,0 +1,24 @@
+
+.img-container {
+
+  /* color: white;
+  width: auto;
+  height: 20rem;
+  background-color: #1d1e1f;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  margin: 13px 3px 5px 3px;
+  overflow: hidden; */
+}
+
+.img-wrapper img {
+  width: auto;
+  min-height: 12rem;
+  max-height: 10rem;
+  display: block;
+}
+
+.img-wrapper h3 {
+  margin: 15px;
+  font-size: 1rem;
+}

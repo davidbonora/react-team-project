@@ -11,8 +11,8 @@ function RelatedCards() {
       <div className={classes.character}>
         {relatedChar.map((related) => {
           return (
-            <div key={related.id} className="card">
-              <div className="image-card">
+            <div key={related.id} className={classes.card}>
+              <div className={classes["image-card"]}>
                 <RelatedCharImage related={related}></RelatedCharImage>
               </div>
             </div>

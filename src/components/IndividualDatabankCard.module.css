@@ -4,15 +4,25 @@
   justify-content: center;
   align-items: center;
   color: white;
-  /* width: 100%;
-  height: 100%; */
   background-color: #1d1e1f;
-  /* border: 1px solid transparent; */
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  /* padding: 20px; */
   margin: 20px;
   overflow: hidden;
+}
+.card .dent {
+  position: absolute;
+  color: white;
+  background-color: white;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-left: 270px;
+  border-top-left-radius: 100em;
+  top: 550px;
+  rotate: 90deg;
+  font-size: 6rem;
+  transform: scaleY(2);
 }
 
 .images {
@@ -34,14 +44,22 @@
   display: block;
   padding: 10px 25px 35px 18px;
 }
-
-.search-bar {
+.search-bar-bg {
   background-color: #1d1e1f;
   border-radius: 5px;
   display: block;
   padding: 10px;
   margin: 10px;
+  height: 5em;
+}
+.search-bar {
+  background-color: #1d1e1f;
+  border-radius: 5px;
+  display: block;
+
   /* height: 5em; */
+  display: flex;
+  justify-content: space-evenly;
 }
 .search-input {
   background-color: #1d1e1f;
@@ -60,9 +78,48 @@
   border-bottom: 2px solid black;
   padding: 0 0 1em 0;
 }
-/* .magnifying{
-  width: 30px;
-  float: right;
+.magnifying {
   color: white;
-  top: 50px;
-} */
+  margin: 5px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 680px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* Code here */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Code here */
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1125px) {
+  .card {
+    float: left;
+    color: white;
+    background-color: #1d1e1f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    overflow: hidden;
+  }
+
+  .written-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: inline;
+    padding: 10px 25px 35px 18px;
+  }
+}
