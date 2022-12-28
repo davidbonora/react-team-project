@@ -1,0 +1,21 @@
+.bound_vertical {
+  background-color: black;
+}
+li {
+  list-style: none;
+}
+.filters_container {
+  width: 90%;
+  background-color: #48494a;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "DIN Next W01 Medium", Helvetica, Arial, sans-serif;
+  color: #fff;
+  /* display: flex;
+  justify-content: space-between;
+  padding: 1em; */
+}
+.films_list {
+  transition: 0.3s;
+  overflow: hidden;
+}
