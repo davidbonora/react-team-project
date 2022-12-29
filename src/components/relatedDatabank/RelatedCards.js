@@ -1,5 +1,5 @@
 import classes from "./RelatedCards.module.css";
-import { relatedCharactersImg } from "../utils/RelatedImages";
+import { relatedCharactersImg } from "../../utils/RelatedImages";
 import { useState } from "react";
 import RelatedCharImage from "./RelatedCharImage";
 
