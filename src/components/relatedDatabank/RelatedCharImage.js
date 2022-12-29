@@ -8,7 +8,9 @@ function RelatedCharImage(props) {
   <div className={classes["img-container"]}>
             <div className={classes["img-wrapper"]}>
               <img src={props.related.image.path} alt={props.related.name} />
-              <ShortLuminousLine></ShortLuminousLine>
+              <div className={classes.luminous}>
+            <ShortLuminousLine></ShortLuminousLine>
+          </div>
               <h3>{props.related.name}</h3>
 
             </div>

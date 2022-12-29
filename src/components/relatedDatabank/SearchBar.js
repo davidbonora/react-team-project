@@ -22,6 +22,21 @@ function SearchBar({ characters }) {
     setWindowWidth(width);
   };
 
+  // {
+  //   Data.filter(post => {
+  //     if (query === '') {
+  //       return post;
+  //     } else if (post.title.toLowerCase().includes(query.toLowerCase())) {
+  //       return post;
+  //     }
+  //   }).map((post, index) => (
+  //     <div className="box" key={index}>
+  //       <p>{post.title}</p>
+  //       <p>{post.author}</p>
+  //     </div>
+  //   ))
+  // }
+
   // // search input
   // const [searchInput, setSearchInput] = useState("");
 
@@ -51,9 +66,10 @@ function SearchBar({ characters }) {
             // value={searchInput}
           />
           <FontAwesomeIcon
-            size="2x"
+            size="1x"
             className={classes.magnifying}
             icon={faMagnifyingGlass}
+            transform="down-2"
             // onClick={() => navigate(family)}
           />
         {width > 700 && <p className={classes["search-text"]}>{addSearchText}</p>}

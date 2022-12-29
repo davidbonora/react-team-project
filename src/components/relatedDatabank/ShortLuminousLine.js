@@ -23,8 +23,8 @@ function ShortLuminousLine() {
         <div
           className={width < 700 ? null : classes["dividing-line-short"]}
         ></div>
-
         <div className={width < 700 ? null : classes["dividing-line-long"]}>
+
           <div className={classes.space}></div>
         </div>
       </div>
