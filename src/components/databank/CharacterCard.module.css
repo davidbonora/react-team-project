@@ -28,7 +28,6 @@
   border-bottom-right-radius: 0.3rem;
   border-top-right-radius: 0.3rem;
   position: relative;
- 
 }
 
 .trapezium {
@@ -39,4 +38,84 @@
   position: absolute;
   top: 115px;
   right: 30px;
+}
+.card-hover-indicator {
+  display: none;
+}
+
+/* Bootstrap breakpoints */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* here your code */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .character-card {
+    flex-direction: column;
+    width: 170px;
+    height: 280px;
+  }
+  .character-img {
+    flex-basis: 60%;
+  }
+  .character-img img {
+    border-top-right-radius: 0.3rem;
+    border-bottom-left-radius: 0;
+  }
+
+  .character-name {
+    height: 105px;
+    flex-basis: 40%;
+    border-bottom-left-radius: 0.3rem;
+    border-top-right-radius: 0;
+  }
+
+  .trapezium {
+    position: absolute;
+    top: 95px;
+    right: 40px;
+  }
+
+  .card-hover-indicator {
+    display: flex;
+    padding: 0.3rem 0;
+  }
+
+  .card-hover-indicator .long {
+    width: 25px;
+    border: 2px solid #5a5c5d;
+    border-radius: 0.2rem;
+  }
+
+  .card-hover-indicator .short {
+    border: 2px solid #5a5c5d;
+    border-radius: 50%;
+    margin-left: 0.2rem;
+  }
+
+  .character-card:hover .long {
+    border: 2px solid white;
+    box-shadow: 0 0 50px #fff,
+    inset 0 0 50px #fff;
+  }
+
+  .character-card:hover .short {
+    border: 2px solid white;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* here your code */
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* here your code */
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  /* here your code */
 }

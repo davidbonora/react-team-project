@@ -31,3 +31,43 @@
     border-bottom: 1px solid black;
     display: inline-block;
 }
+
+/* Bootstrap breakpoints */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    /* here your code */
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .section-heading h3{
+        font-size: 2rem;
+    } 
+    .databank-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .short-line{
+        width: 1%;
+    }
+    .long-line{
+        width: 98%;
+    }
+   
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    /* here your code */
+  }
+  
+  /* X-Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    /* here your code */
+  }
+  
+  /* XX-Large devices (larger desktops, 1400px and up) */
+  @media (min-width: 1400px) {
+    /* here your code */
+  }
+  

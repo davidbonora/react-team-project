@@ -24,6 +24,7 @@ function App() {
         setFetchError(null);
       } catch (error) {
         setFetchError(error.message);
+        console.log(fetchError);
       } finally {
         setPending(false);
       }
@@ -33,9 +34,18 @@ function App() {
   }, []);
   return (
     <Routes>
-      <Route path='/' element={<DataBank characters={characters} />} />
       <Route
-        path=':key'
+        path='/databank'
+        element={
+          <DataBank
+            characters={characters}
+            pending={pending}
+            fetchError={fetchError}
+          />
+        }
+      />
+      <Route
+        path='/databank/:key'
         element={<OliversComponent characters={characters} />}
       />
     </Routes>
