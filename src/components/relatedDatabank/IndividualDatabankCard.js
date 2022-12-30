@@ -1,10 +1,12 @@
 import classes from "./IndividualDatabankCard.module.css";
 import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 import HeaderText from "./HeaderText";
 import Related from "./Related";
 import { useNavigate } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import ShortLuminousLine from "./ShortLuminousLine";
+
 
 function IndividualDatabankCard({ characters }) {
   const { key } = useParams();
@@ -12,28 +14,32 @@ function IndividualDatabankCard({ characters }) {
   // <div className={classes.dent}>&#x2B22;</div>
 
   return (
-    <div>
-      <HeaderText></HeaderText>
-      <SearchBar></SearchBar>
-      <div className={classes.card}>
-        <div className={classes.character}>
-          <img
-            className={classes.images}
-            src={characters[key].image}
-            alt="character"
-          />
-        </div>
 
-        <div className={classes["written-info"]}>
-          <div className={classes.luminous}>
-            <ShortLuminousLine></ShortLuminousLine>
+        <div>
+          <HeaderText></HeaderText>
+          <SearchBar></SearchBar>
+    
+          <div className={classes.card}>
+            <div className={classes.character}>
+              <img
+                className={classes.images}
+                src={characters[key].image}
+                alt="character"
+              />
+            </div>
+    
+            <div className={classes["written-info"]}>
+              <div className={classes.luminous}>
+                <ShortLuminousLine></ShortLuminousLine>
+              </div>
+              <h4>{characters[key].name}</h4>
+              <p>{characters[key].description}</p>
+            </div>
           </div>
-          <h4>{characters[key].name}</h4>
-          <p>{characters[key].description}</p>
+    
+          <Related></Related>
         </div>
-      </div>
-      <Related></Related>
-    </div>
+  
   );
 }
 

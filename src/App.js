@@ -17,10 +17,10 @@
 // import './App.css';
 import DataBank from "./components/AlinasDatabank";
 
-
 import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import IndividualDatabankCard from "./components/relatedDatabank/IndividualDatabankCard";
+import SearchBar from "./components/relatedDatabank/SearchBar";
 const API_CHARACTERS =
   "https://starwars-databank-default-rtdb.europe-west1.firebasedatabase.app/characters.json";
 
@@ -58,7 +58,6 @@ function App() {
           element={<IndividualDatabankCard characters={characters} />}
         />
       </Routes>
-     
     </>
   );
 }

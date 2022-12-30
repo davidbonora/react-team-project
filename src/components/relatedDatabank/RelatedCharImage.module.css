@@ -1,9 +1,10 @@
-
+/* Reset if not work */
 
 .img-wrapper img {
   width: auto;
-  min-height: 12rem;
-  max-height: 10rem;
+  height: 10vh;
+  min-height: 20vh;
+  max-height: 30vh;
   display: block;
 }
 
