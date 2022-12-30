@@ -80,6 +80,7 @@
   .card-hover-indicator {
     display: flex;
     padding: 0.3rem 0;
+    transition: all .2s ease-in-out;
   }
 
   .card-hover-indicator .long {
@@ -96,8 +97,7 @@
 
   .character-card:hover .long {
     border: 2px solid white;
-    box-shadow: 0 0 50px #fff,
-    inset 0 0 50px #fff;
+    box-shadow: 0 0 50px #fff, inset 0 0 50px #fff;
   }
 
   .character-card:hover .short {
@@ -112,10 +112,27 @@
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  /* here your code */
+  .character-card {
+    min-width: 260px;
+    min-height: 430px;
+    margin-bottom: 1.5rem;
+  }
+
+  .trapezium {
+    position: absolute;
+    top: 155px;
+    right: 70px;
+    width: 120px;
+  }
+  .character-name h5 {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+  }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-  /* here your code */
+  .character-card {
+    width: 320px;
+  }
 }

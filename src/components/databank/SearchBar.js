@@ -1,5 +1,6 @@
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import classes from "./SearchBar.module.css";
 const SearchBar = ({ setContent, characters }) => {
   const handleSubmit = (e) => {

@@ -2,14 +2,16 @@ import classes from "./DataBank.module.css";
 import CharactersCard from "./CharactersCard";
 import SearchBar from "./SearchBar";
 import Spinner from "../Spinner";
+import ShowMoreBtn from "./ShowMoreBtn";
 
 const DataBank = ({ characters, pending, fetchError }) => {
   return (
     <>
-      <section className={classes["databank-container"]}>
-        <SearchBar
+     <SearchBar
         // characters ={characters} setCharacters={setCharacters} content ={content} setContent={setContent}
         />
+      <section className={classes["databank-container"]}>
+       
         <div className={classes["section-heading"]}>
           <h3>Andor</h3>
           <div className={classes["short-line"]}></div>
@@ -26,6 +28,7 @@ const DataBank = ({ characters, pending, fetchError }) => {
           />
         ))}
       </section>
+      <ShowMoreBtn/>
     </>
   );
 };

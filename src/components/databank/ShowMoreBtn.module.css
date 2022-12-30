@@ -1,0 +1,10 @@
+.show-more{
+    color: white;
+    background-color: black;
+    padding: .5rem 2rem;
+    border: 1px solid rgb(230, 230, 40);
+    border-radius: 2rem;
+    margin: 0 auto;
+    font-weight: bold;
+    display: block;
+}

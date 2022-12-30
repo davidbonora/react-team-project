@@ -9,6 +9,7 @@
     padding :.6rem;
     border-radius: .3rem;
     position: relative;
+    margin: 2rem auto 0.5rem auto;
 }
 
 .form input{
