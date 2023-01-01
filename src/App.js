@@ -1,8 +1,10 @@
 // import './App.css';
-import DataBank from "./components/databank/DataBank";
+import DataBank from "./views/DataBank";
 import { Routes, Route } from "react-router-dom";
 import OliversComponent from "./components/databank/OliversComponent";
 import { useEffect, useState } from "react";
+import SearchResultPage from "./components/databank/SearchResultPage";
+
 const API_CHARACTERS =
   "https://starwars-databank-default-rtdb.europe-west1.firebasedatabase.app/characters.json";
 
@@ -10,7 +12,6 @@ function App() {
   const [characters, setCharacters] = useState({});
   const [pending, setPending] = useState(true);
   const [fetchError, setFetchError] = useState(null);
-  // const [content, setContent] =useState({})
 
   useEffect(() => {
     const fetchCharacters = async () => {
@@ -20,7 +21,6 @@ function App() {
         const listCharacters = await response.json();
         console.log(listCharacters);
         setCharacters(listCharacters);
-        // setContent(listCharacters)
         setFetchError(null);
       } catch (error) {
         setFetchError(error.message);
@@ -32,6 +32,7 @@ function App() {
 
     (async () => fetchCharacters())();
   }, []);
+
   return (
     <Routes>
       <Route
@@ -43,7 +44,10 @@ function App() {
             fetchError={fetchError}
           />
         }
-      />
+      ></Route>
+      <Route path='/databank/search/:searchTerm' element={<SearchResultPage />}>
+        {" "}
+      </Route>
       <Route
         path='/databank/:key'
         element={<OliversComponent characters={characters} />}

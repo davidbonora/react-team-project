@@ -1,26 +1,45 @@
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { useNavigate } from "react-router-dom";
 import classes from "./SearchBar.module.css";
-const SearchBar = ({ setContent, characters }) => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const SearchBar = ({
+  searchTerm,
+  setSearchTerm,
+  characters,
+  setFilterCharacters,
+  setShowFiltered,
+}) => {
+  const navigate = useNavigate();
+  const handleSearchSubmit = () => {
+    if (!searchTerm) return;
+    let filtered = Object.entries(characters).filter((item) => {
+      return item[1].name.toLowerCase().includes(searchTerm.toLowerCase());
+    });
+    setFilterCharacters(filtered);
+    setShowFiltered(true);
+    setSearchTerm("")
+    navigate(`/databank/search/${searchTerm}`)
   };
 
-  const handleSearch = (e) => {
-    // let search = Object.keys(characters).filter((key) =>
-    //   characters[key].name.toLowerCase().includes(e.target.value.toLowerCase())
-    // );
-    // setContent(search);
-  };
   return (
-    <form onSubmit={handleSubmit} className={classes.form}>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+      }}
+      className={classes.form}
+    >
       <input
-        type='seach'
+        type='text'
         placeholder='Search Databank'
-        onChange={handleSearch}
-      />{" "}
-      <FontAwesomeIcon icon={faMagnifyingGlass} />
+        onChange={(e) => {
+          setSearchTerm(e.target.value.trim());
+        }}
+        value={searchTerm}
+      />
+      <button type='submit' disabled={!searchTerm} onClick={handleSearchSubmit}>
+        <FontAwesomeIcon icon={faMagnifyingGlass} />{" "}
+        <span className={classes.search}>SEARCH</span>
+      </button>
     </form>
   );
 };

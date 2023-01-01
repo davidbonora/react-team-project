@@ -1,31 +1,79 @@
 @font-face {
-    font-family: "Matterhorn";
-    src: url("../../assets/font_Matterhorn/Matterhorn\ Normal.ttf");
-  }
-
-.form{
-    background-color: #1d1e1f;
-    width: 90%;
-    padding :.6rem;
-    border-radius: .3rem;
-    position: relative;
-    margin: 2rem auto 0.5rem auto;
+  font-family: "Matterhorn";
+  src: url("../../assets/font_Matterhorn/Matterhorn\ Normal.ttf");
 }
 
-.form input{
-    background-color: #1d1e1f;
-    font-weight: bold;
-    border-bottom: black .5px solid;
-    padding: .5rem;
-    width:100%;
-    color:#ccc;
-    font-size: 1.2rem;
+.form {
+  background-color: #1d1e1f;
+  width: 90%;
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+  position: relative;
+  margin: 2rem auto 0.5rem auto;
 }
 
-.form svg{
+.form input {
+  background-color: #1d1e1f;
+  font-weight: bold;
+  border-bottom: black 0.5px solid;
+  padding: 0.5rem;
+  width: 100%;
+  color: #ccc;
+  font-size: 1.2rem;
+  font-family: "Matterhorn";
+}
+
+.form button {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  color: #ccc;
+  background-color: #1d1e1f;
+  border: none;
+  cursor: pointer;
+}
+
+.search{
+  display: none;
+  font-family: "Matterhorn";
+}
+
+/* Bootstrap breakpoints */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* here your code */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .form button{
     position: absolute;
-    top: 18px;
-    right: 15px;
-    color: #ccc;
-    font-family: "Matterhorn";
+    top: 15px;
+    right: 25px;
+    font-size: 1.2rem;
+  }
+  .search{
+    color: white;
+    display: inline;
+    font-weight: bold;
+    margin-left: .5rem;
+  }
 }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  
+
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* here your code */
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  /* here your code */
+}
+
