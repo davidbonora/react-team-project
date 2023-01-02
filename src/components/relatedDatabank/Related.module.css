@@ -1,0 +1,77 @@
+
+
+.appearances {
+  display: flex;
+  color: white;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  display: block;
+  margin-left: 30px;
+  margin-top: 50px;
+}
+.appearances .title {
+  font-weight: 300;
+}
+
+.link {
+  margin-top: 16px;
+}
+.link a {
+  color: white;
+  text-decoration: line;
+  font-weight: 100;
+}
+.dividing-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0.1px solid gray;
+  margin: 25px;
+  /* margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 20px; */
+}
+.related {
+  color: white;
+  margin: 20px;
+}
+
+.related h3 {
+  font-weight: 400;
+}
+/* 
+.dent {
+  position: absolute;
+  color: white;
+  width: 1px;
+  margin-left: 20rem;
+  top: 34rem;
+  rotate: 90deg;
+  font-size: 6rem;
+  transform: scaleY(2);
+} */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* Code here */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Code here */
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  /* Code here */
+}

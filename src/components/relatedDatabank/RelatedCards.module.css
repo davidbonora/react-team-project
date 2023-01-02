@@ -1,0 +1,44 @@
+.character {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-card {
+  color: white;
+  width: auto;
+  height: 30vh;
+  background-color: #1d1e1f;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  margin: 13px 3px 5px 3px;
+  overflow: hidden;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 680px) {
+  .image-card {
+    color: white;
+    width: auto;
+    height: 30vh;
+    margin-left: 1vw;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  /* Code here */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Code here */
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1125px) {
+
+}
