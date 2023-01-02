@@ -95,7 +95,7 @@ function Slideshow() {
     handleStopInterval();
   };
 
-  // Indicador
+  // Indicador 
 
   const indicators = [0, 1, 2, 3];
   
@@ -103,7 +103,10 @@ function Slideshow() {
 
   // Función para cambiar el índice del slide actual al hacer click en un botón indicador
   const handleClickIndicator = index => {
+    
     setCurrentIndex(index);
+    console.log(currentIndex);
+    console.log(slideshow);
     handleStopInterval(); // Detiene el intervalo de autoplay
   };
 
