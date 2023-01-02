@@ -6,10 +6,13 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-function SearchBar({ setContent, characters }) {
+function SearchBar({ characters, id }) {
   const { key } = useParams();
   const [width, setWindowWidth] = useState(0);
   const [addSearchText, setAddSearchText] = useState("");
+  const [searchInput, setSearchInput] = useState({});
+  const navigate = useNavigate();
+
   useEffect(() => {
     updateDimensions();
     window.addEventListener("resize", updateDimensions);
@@ -22,27 +25,45 @@ function SearchBar({ setContent, characters }) {
     setWindowWidth(width);
   };
   // Search function
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
 
-  const handleSearch = (e) => {
-    let search = Object.keys(characters).filter((key) =>
-      characters[key].name.toLowerCase().includes(e.target.value.toLowerCase())
-    );
-    setContent(search);
-  };
+  // const handleSearch = (e) => {
+  //   let search = Object.keys(characters).filter((key) =>
+  //     characters[key].name.includes(e.target.value)
+  //   );
+  //   setSearchInput(search);
+  //   console.log(search);
+  // };
+  // console.log(searchInput);
+
+  // const handleSubmit = (e) => {
+  //   let search = Object.keys(characters).filter((key) =>
+  //     characters[key].name.includes(e.target.value)
+  //   );
+  //   setSearchInput(search);
+  //   console.log(search);
+  //   // e.preventDefault();
+
+  //   if (search.length) {
+  //     navigate(`/`);
+  //   } else throw new Error("No match found");
+  // };
 
   return (
     <div>
       <div className={classes["search-bar-bg"]}>
-        <form onSubmit={handleSubmit}>
+        <form
+          action="/"
+          method="get"
+          autoComplete="off"
+          // onSubmit={handleSubmit}
+        >
           <div className={classes["search-bar"]}>
             <input
               className={classes["search-input"]}
-              type="search"
+              type="text"
               placeholder="Databank"
-              onChange={handleSearch}
+              // onSubmit={handleSubmit}
+
               // value={searchInput}
             />
             <FontAwesomeIcon
@@ -50,7 +71,7 @@ function SearchBar({ setContent, characters }) {
               className={classes.magnifying}
               icon={faMagnifyingGlass}
               transform="down-2"
-              // onClick={() => navigate(family)}
+              // onClick={handleSubmit}
             />
             {width > 700 && (
               <p className={classes["search-text"]}>{addSearchText}</p>
