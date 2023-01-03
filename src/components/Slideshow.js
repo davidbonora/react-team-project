@@ -59,10 +59,10 @@ function Slideshow() {
       const slideSize = slideshow.current.children[0].offsetWidth;
       slideshow.current.style.transform = `translateX(-${slideSize}px)`;
 
-      setTimeout(() => {
-        slideshow.current.style.transition = `2000ms ease-out all`;
-        slideshow.current.style.transform = `translateX(0)`;
-      }, 300);
+      // setTimeout(() => {
+      //   slideshow.current.style.transition = `2000ms ease-out all`;
+      //   slideshow.current.style.transform = `translateX(0)`;
+      // }, 300);
     }
   };
 
@@ -94,6 +94,7 @@ function Slideshow() {
       slideshow.current.style.transform = `translateX(${
         slideSize * newPosition
       }px)`;
+      setCurrentIndex(numSlide)
     }
   };
 
