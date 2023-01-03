@@ -1,0 +1,115 @@
+.franja {
+  background-color: black;
+}
+.linea {
+  border-top: 2px solid rgb(54, 53, 53);
+  margin-bottom: 1em;
+}
+.contenedor-principal {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+h3,
+h2 {
+  color: white;
+  font-size: 1.21em;
+}
+span {
+  color: white;
+  font-size: 1.1em;
+  font-weight: bolder;
+}
+
+.titulo-principal {
+  background-color: rgb(10, 10, 10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+}
+/* #contenedor-card-grande{
+
+} */
+
+.titulo-imagen-uno {
+  padding-bottom: 0.2em;
+  padding-top: 0.5em;
+  font-size: 1.5em;
+  background-color: black;
+}
+
+.imagen-grande {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+.contenedor-subtitulo-card {
+  background-color: rgb(22, 22, 22);
+  padding: 1em;
+  padding-bottom: 2em;
+  margin-bottom: 1.5em;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  position: relative;
+}
+.muesca {
+  right: 50px;
+  bottom: 0;
+  position: absolute;
+  width: 160px;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid black;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .contenedor-principal {
+    /* background-color: brown; */
+    flex-direction: row;
+    /* overflow: auto; */
+    /* height: 100%; */
+  
+  }
+  #contenedor-card-grande {
+    margin-right: 2em;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .imagen-contenedor-grande {
+  }
+  .contenedor-subtitulo-card {
+  }
+
+  .contenedor-todasCardsPeques {
+    width: 50%;
+    /* height: 100%; */
+  }
+  .logo-linea {
+    border-top: 5px solid rgb(68, 67, 67);
+    border-radius: 5em;
+    margin-bottom: 1em;
+    width: 35px;
+    margin-right: 0.3em;
+  }
+  .logo-circulo {
+    border-radius: 50%;
+    margin-bottom: 1em;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(68, 67, 67);
+  }
+  .contenedor-logo {
+    display: flex;
+  }
+
+  .muesca {
+    width: 115px;
+  }
+}
