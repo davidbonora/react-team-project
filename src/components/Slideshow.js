@@ -23,7 +23,7 @@ function Slideshow() {
       // Obtiene el primer elemento del slideshow
       const firstElement = slideshow.current.children[0];
 
-      // Extablece la transición para el slideshow
+      // Establece la transición para el slideshow
       slideshow.current.style.transition = `250ms ease-out all`;
 
       const slideSize = slideshow.current.children[0].offsetWidth;
@@ -66,6 +66,37 @@ function Slideshow() {
     }
   };
 
+  const selectedSlide = (numSlide) => {
+    if (slideshow.current.children.length > 0) {
+      handleStopInterval();
+      slideshow.current.style.transition = `none`;
+      const slideSize = slideshow.current.children[0].offsetWidth;
+      let positions = [];
+      Array.from(slideshow.current.children).forEach((element, index) => {
+        positions[index] = {
+          elementId: parseInt(element.id),
+          currentPosition: index,
+        };
+      });
+      console.log(positions);
+
+      let current = parseInt(slideshow.current.children[0].id);
+      let newPosition = 0;
+      if (current !== numSlide) {
+        positions.forEach((element) => {
+          if (element.elementId === numSlide) {
+            newPosition = element.currentPosition;
+          }
+        });
+        newPosition = -newPosition;
+      }
+      slideshow.current.style.transition = `150ms ease-out all`;
+      slideshow.current.style.transform = `translateX(${
+        slideSize * newPosition
+      }px)`;
+    }
+  };
+
   // Para el autoplay
   useEffect(() => {
     const interval = setInterval(() => {
@@ -95,42 +126,29 @@ function Slideshow() {
     handleStopInterval();
   };
 
-  // Indicador 
+  // Indicador
 
   const indicators = [0, 1, 2, 3];
-  
+
   const [currentIndex, setCurrentIndex] = useState(0); // Estado para el índice del slide actual
 
-  // Función para cambiar el índice del slide actual al hacer click en un botón indicador
-  const handleClickIndicator = index => {
-    
-    setCurrentIndex(index);
-    console.log(currentIndex);
-    console.log(slideshow);
-    handleStopInterval(); // Detiene el intervalo de autoplay
-  };
 
   // Crea un botón indicador por cada elemento en el array "indicators"
   const buttons = indicators.map((_, index) => (
     <button
       key={index}
       className={index === currentIndex ? classes.active : ""} // Añade una clase "active" al botón del slide actual
-      onClick={() => handleClickIndicator(index)} // Llama a la función "handleClickIndicator" al hacer click en el botón
-    >
-      {index + 1}
-    </button>
+      onClick={() => selectedSlide(index)} // Llama a la función "handleClickIndicator" al hacer click en el botón
+    ></button>
   ));
 
-
   return (
-
-
     <div className={classes["main-container"]}>
       <h5>ALL YOUR CODE WARS FAVOURITES NOW STREAMING ON CODE+</h5>
       {/* Slideshow */}
       <div ref={slideshow} className={classes["slide-container"]}>
-        <div className={classes.slide}>
-            <img src={Slide1} alt="Slide 1" />
+        <div className={classes.slide} id="0">
+          <img src={Slide1} alt="Slide 1" />
           <div className={classes["slide-info"]}>
             <h2>
               <span>CODE WARS</span>: BEST OF 2022
@@ -142,8 +160,8 @@ function Slideshow() {
             <button>READ MORE</button>
           </div>
         </div>
-        <div className={classes.slide}>
-            <img src={Slide2} alt="Slide 2" />
+        <div className={classes.slide} id="1">
+          <img src={Slide2} alt="Slide 2" />
           <div className={classes["slide-info"]}>
             <h2>FROM SANTA YODA TO ROCKET SLEDS</h2>
             <h4>
@@ -153,8 +171,8 @@ function Slideshow() {
             <button>READ MORE</button>
           </div>
         </div>
-        <div className={classes.slide}>
-            <img src={Slide3} alt="Slide 3" />
+        <div className={classes.slide} id="2">
+          <img src={Slide3} alt="Slide 3" />
           <div className={classes["slide-info"]}>
             <h2>
               <span>THE HIGH REPUBLIC SHOW</span>
@@ -166,8 +184,8 @@ function Slideshow() {
             <button>WATCH NOW</button>
           </div>
         </div>
-        <div className={classes.slide}>
-            <img src={Slide4} alt="Slide 4" />
+        <div className={classes.slide} id="3">
+          <img src={Slide4} alt="Slide 4" />
           <div className={classes["slide-info"]}>
             <h2>FROM A CERTAIN POINT OF VIEW</h2>
             <h4>
@@ -186,14 +204,7 @@ function Slideshow() {
           <RightArrow />
         </button>
       </div>
-      <div className={classes["img-buttons"]}>
-         {/* <button  className={classes["img-btn-1"]}></button>
-        <button  className={classes["img-btn-2"]}></button>
-        <button  className={classes["img-btn-3"]}></button>
-        <button  className={classes["img-btn-4"]}></button>  */}
-        {buttons}
-      </div>
-
+      <div className={classes["img-buttons"]}>{buttons}</div>
     </div>
   );
 }
