@@ -34,10 +34,12 @@ const DataBank = () => {
         </div>
         {pending && <Spinner />}
         {fetchError && (
-          <h4 style={{ color: "white" }}>
+          <h4>
             Something went wrong please reload the page
           </h4>
         )}
+
+        {/* 12 cards showed when component rendered */}
         {!pending &&
           !fetchError &&
           !showMore &&
@@ -51,6 +53,7 @@ const DataBank = () => {
                 name={characters[key].name}
               />
             ))}
+            {/* All cards showed when click button "Show more" */}
         {!pending &&
           !fetchError &&
           showMore &&
