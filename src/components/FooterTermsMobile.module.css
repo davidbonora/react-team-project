@@ -1,0 +1,28 @@
+/* .footer-terms {
+  display: flex;
+} */
+.footer-terms a {
+  /* display: flex;
+  justify-content: center; */
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 0.8rem;
+  color: #fff;
+  margin-bottom: 20px;
+  
+}
+.list-item {
+  list-style: none;
+  list-style-type: none;
+}
+
+@media (min-width: 800px) {
+  .footer-terms a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}

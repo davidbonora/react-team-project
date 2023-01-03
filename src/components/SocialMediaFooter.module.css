@@ -1,0 +1,44 @@
+.all-icons {
+  margin-right: 20px;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 60px;
+}
+.icon-item {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+  font-size: 2rem;
+  color: #fff;
+}
+.icon:hover{
+
+  text-shadow: 0 0 40px 50px rgb(255, 255, 255) !important;
+}
+.dividing-line {
+  border-left: 1px solid gray;
+  height: 30px;
+}
+img {
+  /* background-image: url(../assets/logoKidsfooter/kidsLogo.png); */
+  height: 20px;
+  width: 30px;
+  margin-left: 18px;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+  color: #fff;
+}
