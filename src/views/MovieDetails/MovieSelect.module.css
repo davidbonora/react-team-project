@@ -1,0 +1,188 @@
+/* stream on code+ banner */
+.title-container {
+    background-color: #0a0b0b;
+    padding: 1.3em;
+    margin-bottom: 3em;
+  }
+  
+  .title-container h2 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    line-height: 1.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mobile-text {
+    display: inline-block;
+  }
+  
+  .non-mobile-text {
+    display: none;
+  }
+  
+  /* select all film  */
+  
+  /* title and after before selectors */
+  
+  .select-container-title {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 1.7em;
+    background-color: #48494a;
+    padding: 14px 0 14px 26px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .select-container-title>h3 {
+    font-family: 'Cabin', sans-serif;
+  }
+  
+  .select-container-title::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 16px;
+    background: #fff;
+    box-shadow: 0px 0px 4px 1px #fade4b;
+    border-radius: 4px;
+    margin-top: 2px;
+    margin-left: -10px;
+  }
+  
+  .select-container-title:hover:before {
+    box-shadow: 0px 0px 4px 1px #fff;
+  }
+  
+  .arrow-img {
+    position: absolute;
+    right: 25px;
+    height: 20px;
+    width: 16px;
+    cursor: pointer;
+  }
+  
+  .arrow-img-rotate {
+    position: absolute;
+    right: 25px;
+    height: 20px;
+    width: 16px;
+    transform: rotate(180deg);
+    cursor: pointer;
+  }
+  
+  /* dropdown and link list and items */
+  
+  .link-list-dropdown {
+    display: block;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .link-list-dropdown-closed {
+    display: none;
+  }
+  
+  .link-list {
+    display: flex;
+    flex-wrap: wrap;
+    background: #48494a;
+    position: absolute;
+    margin-top: 0.2em;
+    column-gap: unset;
+    padding: 6px 0;
+    width: 100vw;
+    border-radius: 0;
+    top: -27px;
+    max-height: 50vh;
+    overflow: scroll;
+  }
+  
+  .link-list-item {
+    padding: 16px 30px;
+    width: 100%;
+  }
+  
+  .link {
+    color: #b5b7b7;
+    line-height: 1.5rem;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .link:hover {
+    color: #fff;
+  }
+  
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 540px) {
+    .mobile-text {
+      display: none;
+    }
+  
+    .non-mobile-text {
+      display: inline-block;
+    }
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 730px) {
+    .link-list {
+      border-radius: 0.5rem;
+      width: 90%;
+      margin: auto 5%;
+      column-gap: 10px;
+      margin-top: 0.2em;
+    }
+    .link-list-item {
+      width: calc(33% - 20px);
+      padding: 10px 0 10px 12px;
+    }
+  
+    .link {
+      font-size: 1.3rem;
+    }
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .link-list {
+      border-radius: 0.5rem;
+      width: 80%;
+      margin: 4px 10%;
+      column-gap: 28px;
+      overflow: auto;
+    }
+  
+    .link-list-item {
+      width: calc(25% - 28px);
+      padding: 10px 0 10px 12px;
+    }
+  
+    .select-container-title {
+      width: 80%;
+    }
+  }
+  
+  /* X-Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    /* here your code */
+  }
+  
+  /* XX-Large devices (larger desktops, 1400px and up) */
+  @media (min-width: 1400px) {
+    
+  }
