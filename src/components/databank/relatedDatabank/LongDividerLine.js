@@ -1,4 +1,5 @@
 import classes from  "./LongDividerLine.module.css";
+// This is the long line that is used in the related section.
 function CommonDividerLine() {
   return (
     <div>

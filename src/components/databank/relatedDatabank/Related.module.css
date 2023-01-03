@@ -20,7 +20,8 @@
 }
 .link a {
   color: white;
-  text-decoration: line;
+  text-decoration: underline;
+  text-decoration-color: yellow;
   font-weight: 100;
 }
 .dividing-line {

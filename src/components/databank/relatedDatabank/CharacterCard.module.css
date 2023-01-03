@@ -1,15 +1,21 @@
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
   color: white;
   background-color: #1d1e1f;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  margin: 20px;
+  margin: 30px;
   overflow: hidden;
   /* position: relative; */
+  min-width: 200px;
+}
+img {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
 }
 
 /*  
@@ -23,35 +29,90 @@
     right: 70px;
   } */
 
-.images {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
 .written-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100%;
   display: block;
   padding: 10px 25px 35px 18px;
 }
+.written-info p {
+  margin-top: 5px;
+  padding: 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
 
+/* Two piece divider luminous */
+.sw-divider {
+  display: flex;
+  margin-top: 5px;
+}
+.dividing-line-short {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  background-color: gray;
+  height: 4px;
+  margin: 1px;
+  margin-left: 4px;
 
-/* XX-Large devices (larger desktops, 850px and up) */
-@media (min-width: 850px) {
- 
-  .luminous{
-  margin-bottom: 3px
+  margin-top: 5px;
+  width: 5px;
+  border-radius: 30px;
+}
+.dividing-line-long {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid gray;
+  background-color: gray;
+  height: 4px;
+  margin: 1px;
+  margin-top: 5px;
+  width: 27px;
+  border-radius: 30px;
+}
+
+/* XX-Large devices (larger desktops, 880px and up) */
+/* HEre it changes side image view */
+@media (min-width: 1000px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    min-height: 232.91px;
+    height: 20%;
+    width: auto;
+    color: white;
+    background-color: #1d1e1f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin: 50px;
+    overflow: hidden;
   }
 
-/*  
+  .luminous {
+    margin-bottom: 8px;
+  }
+  .card:hover .dividing-line-short {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 1);
+
+    box-shadow: 0 0 10px 2px rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+  .card:hover .dividing-line-long {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 1);
+
+    box-shadow: 0 0 10px 2px rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+
+  /*  
   .dent {
     border-bottom: 18px solid black;
     border-left: 18px solid transparent;
@@ -62,38 +123,47 @@
     right: 70px;
   } */
   .images {
-    width: auto;
-    height: 60vh;
-    /* display: block;
-    float: left; */
+    width: 100%;
+    height: auto;
+    display: block;
+
   }
   .written-info {
+    align-items: flex-start;
     width: 100%;
     height: 100%;
-    display: inline;
+    /* display: block; */
     padding: 10px 25px 35px 18px;
   }
+  .written-info p {
+    margin-top: 5px;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
 }
+
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1125px) {
   .card {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
+
+    height: 20%;
+    width: auto;
     color: white;
     background-color: #1d1e1f;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    margin: 20px;
+    margin: 50px;
     overflow: hidden;
   }
-  .luminous{
-  margin-bottom: 3px
+  .luminous {
+    margin-bottom: 10px;
   }
 
-/*  
+  /*  
   .dent {
     border-bottom: 18px solid black;
     border-left: 18px solid transparent;
@@ -104,15 +174,21 @@
     right: 70px;
   } */
   .images {
-    width: auto;
-    height: 45vh;
-    /* display: block;
-    float: left; */
+    width: 100%;
+    height: auto;
+    display: block;
   }
   .written-info {
     width: 100%;
     height: 100%;
-    display: inline;
+    /* display: block; */
     padding: 10px 25px 35px 18px;
+  }
+  .written-info p {
+    margin-top: 5px;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.2;
   }
 }

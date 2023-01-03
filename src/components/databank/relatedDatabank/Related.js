@@ -2,6 +2,7 @@ import classes from "./Related.module.css";
 import LongDividerLine from "./LongDividerLine";
 import RelatedCards from "./RelatedCards";
 
+// This is the related section that is used in the individual databank pages.
 function IndividualDatabankBase() {
   return (
     <>

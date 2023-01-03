@@ -3,6 +3,7 @@ import { relatedCharactersImg } from "../../../utils/RelatedImages";
 import { useState } from "react";
 import RelatedCharImage from "./RelatedCharImage";
 
+// This is each one of the related cards that is used in the related section.
 function RelatedCards() {
   const [relatedChar, setRelatedChar] = useState(relatedCharactersImg);
 
