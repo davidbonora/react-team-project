@@ -1,0 +1,49 @@
+.search-container{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.form {
+    background-color: #1d1e1f;
+    width: 90%;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    position: relative;
+    margin: 2rem auto 0.5rem auto;
+  }
+  
+  .form input {
+    background-color: #1d1e1f;
+    font-weight: bold;
+    border-bottom: black 0.5px solid;
+    padding: 0.5rem;
+    width: 100%;
+    color: #ccc;
+    font-size: 1.2rem;
+    font-family: "Matterhorn";
+  }
+
+  .form svg {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    color: #ccc;
+    background-color: #1d1e1f;
+    border: none;
+    cursor: pointer;
+    background-color: #48494a;
+    padding: .5rem;
+    border-radius: .5rem;
+  }
+  .form .trapezium {
+    border-bottom: 20px solid black;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    width: 20px;
+    position: absolute;
+    top: 15px;
+    left: -25px;
+    transform: rotate(270deg);
+  }

@@ -1,5 +1,8 @@
 import { useParams } from "react-router-dom";
-const OliversComponent = ({ characters }) => {
+import { useContext } from "react";
+import { DataBankContext } from "../../providers/DataBankProvider";
+const OliversComponent = () => {
+  const { characters } = useContext(DataBankContext);
   const { key } = useParams();
 
   return (

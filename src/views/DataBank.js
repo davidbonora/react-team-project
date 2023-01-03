@@ -1,15 +1,23 @@
 import classes from "./DataBank.module.css";
 import CharactersCard from "../components/databank/CharactersCard";
 import SearchBar from "../components/databank/SearchBar";
-import Spinner from "../components/Spinner";
+import Spinner from "../components/spinner/Spinner";
 import ShowMoreBtn from "../components/databank/ShowMoreBtn";
-import { useState, useEffect } from "react";
-const DataBank = ({ characters, pending, fetchError }) => {
+import { DataBankContext } from "../providers/DataBankProvider";
+import { useState, useContext } from "react";
+
+const DataBank = () => {
+  const {
+    characters,
+    pending,
+    fetchError,
+    searchTerm,
+    setSearchTerm,
+    setFilterCharacters,
+  } = useContext(DataBankContext);
+
   const [showMore, setShowMore] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [filterCharacters, setFilterCharacters] = useState([]);
-  const [showFiltred, setShowFiltered] = useState(false);
-  console.log(filterCharacters.length);
+
   return (
     <>
       <SearchBar
@@ -17,7 +25,6 @@ const DataBank = ({ characters, pending, fetchError }) => {
         setSearchTerm={setSearchTerm}
         searchTerm={searchTerm}
         setFilterCharacters={setFilterCharacters}
-        setShowFiltered={setShowFiltered}
       />
       <section className={classes["databank-container"]}>
         <div className={classes["section-heading"]}>
@@ -34,7 +41,6 @@ const DataBank = ({ characters, pending, fetchError }) => {
         {!pending &&
           !fetchError &&
           !showMore &&
-          !showFiltred &&
           Object.keys(characters)
             .slice(0, 12)
             .map((key) => (
@@ -46,7 +52,6 @@ const DataBank = ({ characters, pending, fetchError }) => {
               />
             ))}
         {!pending &&
-          !showFiltred &&
           !fetchError &&
           showMore &&
           Object.keys(characters).map((key) => (
@@ -57,27 +62,8 @@ const DataBank = ({ characters, pending, fetchError }) => {
               name={characters[key].name}
             />
           ))}
-
-        {filterCharacters.length &&
-          showFiltred &&
-          filterCharacters.map((item) => {
-            let key = item[0];
-            return (
-              <CharactersCard
-                key={key}
-                id={key}
-                img={characters[key].thumb}
-                name={characters[key].name}
-              />
-            );
-          })}
-        {!filterCharacters.length && showFiltred && (
-          <p style={{ color: "white" }}>
-            There is no such character in our Databank. Please try again
-          </p>
-        )}
       </section>
-      {!showFiltred && <ShowMoreBtn setShowMore={setShowMore} />}
+      <ShowMoreBtn setShowMore={setShowMore} />
     </>
   );
 };

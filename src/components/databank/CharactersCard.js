@@ -1,7 +1,9 @@
-import classes from "./CharacterCard.module.css";
+import classes from "./modules/CharacterCard.module.css";
 import { useNavigate } from "react-router-dom";
+
 const CharactersCard = ({ img, name, id }) => {
   const navigate = useNavigate();
+
   return (
     <div
       className={classes["character-card"]}
@@ -17,6 +19,7 @@ const CharactersCard = ({ img, name, id }) => {
           <div className={classes.long}></div>
           <div className={classes.short}></div>
         </div>
+
         <h5>{name}</h5>
         <div className={classes.trapezium}></div>
       </div>
