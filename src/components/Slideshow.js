@@ -13,61 +13,72 @@ import { ReactComponent as RightArrow } from "../assets/img/slideshow/chevron-ri
 import { useRef, useEffect, useState } from "react";
 
 function Slideshow() {
+  const [currentIndex, setCurrentIndex] = useState(0); // Estado para el índice del slide actual
+  const [moveAuto, setMoveAuto] = useState(true);
   const slideshow = useRef(null);
-
-  const intervalRef = useRef();
+  const firstRender = useRef(true);
 
   const nextSlide = () => {
     // Comprueba que el slideshow tiene elementos
     if (slideshow.current.children.length > 0) {
       // Obtiene el primer elemento del slideshow
-      const firstElement = slideshow.current.children[0];
 
       // Establece la transición para el slideshow
-      slideshow.current.style.transition = `250ms ease-out all`;
 
-      const slideSize = slideshow.current.children[0].offsetWidth;
+      //Envía el primer elemento al final
 
-      // Mueve el slideshow
-      slideshow.current.style.transform = `translateX(-${slideSize}px)`;
+      setTimeout(() => {
+        slideshow.current.style.transition = `1s ease-out all`;
+        const slideSize = slideshow.current.children[0].offsetWidth;
+        // Mueve el slideshow
+        slideshow.current.style.transform = `translateX(-${slideSize}px)`;
 
-      const transition = () => {
-        // Reinicia la posición del slideshow
-        slideshow.current.style.transition = `none`;
-        slideshow.current.style.transform = `translateX(0)`;
+        setTimeout(() => {
+          const firstElement = slideshow.current.children[0];
+          slideshow.current.appendChild(firstElement);
+          slideshow.current.style.transition = `none`;
+          slideshow.current.style.transform = `translateX(0)`;
+        }, 1000);
+        if (currentIndex < 3) {
+          setCurrentIndex(currentIndex + 1);
+        } else {
+          setCurrentIndex(0);
+        }
+      }, 2000);
+      // const transition = () => {
+      //   // Reinicia la posición del slideshow
 
-        //Envía el primer elemento al final
+      //   slideshow.current.removeEventListener(`transitionend`, transition);
+      //   // console.log('running!');
+      //   // setCurrentSlide(currentSlide + 1)
+      //   // console.log("current index", currentIndex);
+      //   // console.log("current slide", currentSlide);
+      // };
 
-        slideshow.current.appendChild(firstElement);
-
-        slideshow.current.removeEventListener(`transitionend`, transition);
-      };
-
-      // EventListener para cuando acaba la animación
-      slideshow.current.addEventListener(`transitionend`, transition);
+      // // EventListener para cuando acaba la animación
+      // slideshow.current.addEventListener(`transitionend`, transition);
     }
   };
 
   const prevSlide = () => {
     if (slideshow.current.children.length > 0) {
-      const index = slideshow.current.children.length - 1;
-      const lastElement = slideshow.current.children[index];
-      slideshow.current.insertBefore(lastElement, slideshow.current.firstChild);
-
-      slideshow.current.style.transition = `none`;
-
+      slideshow.current.style.transition = `300ms ease-out all`;
       const slideSize = slideshow.current.children[0].offsetWidth;
-      slideshow.current.style.transform = `translateX(-${slideSize}px)`;
-
-      // setTimeout(() => {
-      //   slideshow.current.style.transition = `2000ms ease-out all`;
-      //   slideshow.current.style.transform = `translateX(0)`;
-      // }, 300);
+      slideshow.current.style.transform = `translateX(${slideSize}px)`;
+      
+      setTimeout(() => {
+        const index = slideshow.current.children.length - 1;
+        const lastElement = slideshow.current.children[index];
+        slideshow.current.insertBefore(lastElement, slideshow.current.firstChild);      
+        slideshow.current.style.transition = `none`;
+          slideshow.current.style.transform = `translateX(0)`;
+        }, 300);
     }
   };
 
   const selectedSlide = (numSlide) => {
     if (slideshow.current.children.length > 0) {
+      setMoveAuto(false);
       handleStopInterval();
       slideshow.current.style.transition = `none`;
       const slideSize = slideshow.current.children[0].offsetWidth;
@@ -94,45 +105,29 @@ function Slideshow() {
       slideshow.current.style.transform = `translateX(${
         slideSize * newPosition
       }px)`;
-      setCurrentIndex(numSlide)
+      setCurrentIndex(numSlide);
     }
   };
 
-  // Para el autoplay
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000);
-
-    // Elimina el intervalo
-    // Guarda la referencia del intervalo
-    intervalRef.current = interval;
-
-    // Devuelve la función que elimina el intervalo
-    return () => clearInterval(intervalRef.current);
-  }, []);
-
   // Función para detener el intervalo al hacer click
   const handleStopInterval = () => {
-    clearInterval(intervalRef.current);
+    // clearInterval(intervalRef.current);
   };
 
   // Agrupación de funciones para poder pasarlas al onClick porque react solo admite pasarle una función
   const handleClickNext = () => {
+    setMoveAuto(false)
     nextSlide();
-    handleStopInterval();
+    // handleStopInterval();
   };
   const handleClickPrev = () => {
+    setMoveAuto(false)
     prevSlide();
-    handleStopInterval();
+    // handleStopInterval();
   };
 
-  // Indicador
-
+  // Array para generar los botones inferiores del slide
   const indicators = [0, 1, 2, 3];
-
-  const [currentIndex, setCurrentIndex] = useState(0); // Estado para el índice del slide actual
-
 
   // Crea un botón indicador por cada elemento en el array "indicators"
   const buttons = indicators.map((_, index) => (
@@ -142,6 +137,26 @@ function Slideshow() {
       onClick={() => selectedSlide(index)} // Llama a la función "handleClickIndicator" al hacer click en el botón
     ></button>
   ));
+
+  // Para el autoplay
+  useEffect(() => {
+    if (firstRender.current) {
+      firstRender.current = false;
+    } else {
+      if (moveAuto) {
+        nextSlide();
+      }
+    }
+    // const interval = setInterval(() => {
+    // }, 5000);
+
+    // // Elimina el intervalo
+    // // Guarda la referencia del intervalo
+    // intervalRef.current = interval;
+
+    // // Devuelve la función que elimina el intervalo
+    // return () => clearInterval(intervalRef.current);
+  });
 
   return (
     <div className={classes["main-container"]}>

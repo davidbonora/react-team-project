@@ -107,7 +107,7 @@
   background-color: rgb(75, 73, 73);
 }
 .active {
-  background-color: red !important;
+  background-color: rgb(75, 73, 73) !important;
 }
 
 /* Breakpoints*/
@@ -161,19 +161,30 @@
   }
   .slide-buttons button {
     opacity: 1;
-    margin: 15em 1em 0 1em; 
+    margin: 15em 1em 0 1em;
     font-size: x-large;
   }
-  .img-buttons {
+  /* .img-buttons {
+    position: absolute;
+    margin: -3em; */
+    /* margin: -8.5em; */
     /* opacity: 0; */
+  /* } */
+  /* .img-buttons button {
+    width: 200px;
+    height: 100px;
+    background-image: url("../assets/img/slideshow/sld-1.webp");
   }
+  .active {
+    border-top: 5px solid #1b6db9;
+  } */
 }
-@media (min-width:1400px) {
-    .main-container{
-        max-width: 1600px;
-        /* height: 39vh; */
-    }
-    .slide-container img{
-        height: 50em;
-    }
+@media (min-width: 1400px) {
+  .main-container {
+    max-width: 1600px;
+    /* height: 39vh; */
+  }
+  .slide-container img {
+    height: 50em;
+  }
 }
