@@ -1,0 +1,42 @@
+.title__container {
+  background-color: #0a0b0b;
+  padding: 9px 0 8px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title__container__text {
+  font-family: "DIN Next W01 Medium", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fff;
+  padding: 8px;
+}
+/* Bootstrap breakpoints */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* here your code */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* here your code */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* here your code */
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* here your code */
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  /* here your code */
+}
+

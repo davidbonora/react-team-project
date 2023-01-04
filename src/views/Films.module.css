@@ -1,0 +1,18 @@
+.main-bg-color {
+  background-color: black;
+}
+.direction {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  .direction {
+    flex-direction: row;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  /* here your code */
+}

@@ -1,10 +1,6 @@
-import React from "react";
-
+import Films from "./views/Films";
 function App() {
-    return (
-        <div>
-        </div>
-    );
+  return <Films />;
 }
 
 export default App;

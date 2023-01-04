@@ -1,0 +1,60 @@
+.BrowseText {
+  font-family: "DIN Next W01 Medium", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 1.75em;
+  color: #fff;
+
+}
+.BrowseTitle{
+  position: relative;
+  padding-bottom: .3em;
+}
+.BrowseContainer {
+  padding: 1.3em 1.31em;
+}
+
+.BrowseTitle:before,
+.BrowseTitle:after {
+  content: "";
+  position: absolute;
+  background-color: #707070;
+  height: 0.125em;
+  width: 0.25em;
+  bottom: 0px;
+  left: 0px;
+  border-radius: 2px;
+}
+
+.BrowseTitle:after {
+  left: 0.5em;
+  width: calc(100% - 0.5em);
+}
+/* Bootstrap breakpoints */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* here your code */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .BrowseContainer{
+    margin: 0 2em;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* here your code */
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* here your code */
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  /* here your code */
+}

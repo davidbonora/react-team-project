@@ -1,0 +1,68 @@
+.filmCard {
+  list-style: none;
+  font-family: "DINNEXT", Helvetica, Arial, sans-serif;
+  font-size: 1.125em;
+  font-weight: 700;
+  line-height: 1.5rem;
+  color: #fff;
+  padding: 1.375em 1.31em;
+  line-height: 1.5em;
+}
+.filmImage {
+  border-radius: 10px;
+  width: 10.4em;
+  height: 15.6em;
+}
+.filmsPosterTitle {
+  width: 10.24em;
+  height: 3em;
+}
+
+/* Bootstrap breakpoints */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .filmsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+.filmCard{
+  width: 50%;
+}
+.filmImage{
+  width: 100%;
+  height: auto;
+}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+.filmImage{
+  display: flex;
+}
+.filmCard{
+  width: 27%;
+}
+.filmsGrid{
+  margin-left: 1.75em;
+}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* here your code */
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+.filmsGrid{
+  flex-direction: row;
+  align-items: flex-start;
+  width: 70%;
+}
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  /* here your code */
+}
