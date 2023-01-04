@@ -1,10 +1,11 @@
 /* CARD PEQUEÑA */
 
 #contenedor-card-pequeña {
-  /* width: 100%; */
+  width: 100%;
   display: flex;
   margin-bottom: 1.5em;
   border-radius: 1rem;
+  /* min-height: 90px; */
 }
 
 .contenedor-subtitulo-card-pequeña {
@@ -17,7 +18,7 @@
 }
 
 .titulo-card-pequeña {
-  /* white-space: normal; */
+  white-space: normal;
   text-overflow: ellipsis;
   overflow: hidden;
   -webkit-line-clamp: 2;
@@ -30,10 +31,30 @@
 }
 .imagen-peque {
   width: 100%;
+  height: 100%;
   border-bottom-left-radius: 0.5em;
   border-top-left-radius: 0.5em;
 }
-
+.logo-linea {
+  /* border-top: 5px solid rgb(68, 67, 67); */
+  background-color: rgb(68, 67, 67);
+  border-radius: 5em;
+  margin-bottom: 1em;
+  width: 30px;
+  margin-right: 0.3em;
+  display: none;
+}
+.logo-circulo {
+  border-radius: 50%;
+  margin-bottom: 1em;
+  width: 5px;
+  height: 5px;
+  background-color: rgb(68, 67, 67);
+  display: none;
+}
+.contenedor-logo {
+  display: flex;
+}
 .muesca-pequeña {
   right: 52px;
   position: absolute;
@@ -54,20 +75,19 @@
     border-bottom: 12px solid black;
   }
   .logo-linea {
-    border-top: 5px solid rgb(68, 67, 67);
-    border-radius: 5em;
-    margin-bottom: 1em;
-    width: 30px;
-    margin-right: 0.3em;
+    display: block;
   }
   .logo-circulo {
-    border-radius: 50%;
-    margin-bottom: 1em;
-    width: 5px;
-    height: 5px;
-    background-color: rgb(68, 67, 67);
+    display: block;
   }
-  .contenedor-logo {
-    display: flex;
+  #contenedor-card-pequeña:hover .logo-linea {
+    box-shadow: 0px 0px 4px 1px #c6ecfa;
+    background: #fff;
+    transition: background-color 300ms, box-shadow 300ms;
+  }
+  #contenedor-card-pequeña:hover .logo-circulo {
+    box-shadow: 0px 0px 4px 1px #c6ecfa;
+    background: #fff;
+    transition: background-color 300ms, box-shadow 300ms;
   }
 }

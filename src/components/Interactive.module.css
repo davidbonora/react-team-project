@@ -2,7 +2,7 @@
   background-color: black;
 }
 .linea {
-  border-top: 2px solid rgb(54, 53, 53);
+  border-top: 3px solid rgb(54, 53, 53);
   margin-bottom: 1em;
 }
 .contenedor-principal {
@@ -28,10 +28,17 @@ span {
   align-items: center;
   justify-content: center;
   padding: 1em;
+  display: none;
 }
-/* #contenedor-card-grande{
 
-} */
+.titulo-principal-mobile {
+  background-color: rgb(10, 10, 10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  display: flex;
+}
 
 .titulo-imagen-uno {
   padding-bottom: 0.2em;
@@ -66,6 +73,25 @@ span {
   border-left: 15px solid transparent;
   border-bottom: 15px solid black;
 }
+.logo-linea {
+  background-color: rgb(68, 67, 67);
+  border-radius: 5em;
+  margin-bottom: 1em;
+  width: 35px;
+  margin-right: 0.3em;
+  display: none;
+}
+.logo-circulo {
+  border-radius: 50%;
+  margin-bottom: 1em;
+  width: 5px;
+  height: 5px;
+  background-color: rgb(68, 67, 67);
+  display: none;
+}
+.contenedor-logo {
+  display: flex;
+}
 
 /* RESPONSIVE */
 @media (min-width: 768px) {
@@ -74,7 +100,6 @@ span {
     flex-direction: row;
     /* overflow: auto; */
     /* height: 100%; */
-  
   }
   #contenedor-card-grande {
     margin-right: 2em;
@@ -82,34 +107,36 @@ span {
     display: flex;
     flex-direction: column;
   }
-  .imagen-contenedor-grande {
+  #contenedor-card-grande:hover .logo-linea {
+    box-shadow: 0px 0px 4px 1px #c6ecfa;
+    background: #fff;
+    transition: background-color 300ms, box-shadow 300ms;
   }
-  .contenedor-subtitulo-card {
+  #contenedor-card-grande:hover .logo-circulo {
+    box-shadow: 0px 0px 4px 1px #c6ecfa;
+    background: #fff;
+    transition: background-color 300ms, box-shadow 300ms;
   }
 
   .contenedor-todasCardsPeques {
     width: 50%;
-    /* height: 100%; */
-  }
-  .logo-linea {
-    border-top: 5px solid rgb(68, 67, 67);
-    border-radius: 5em;
-    margin-bottom: 1em;
-    width: 35px;
-    margin-right: 0.3em;
-  }
-  .logo-circulo {
-    border-radius: 50%;
-    margin-bottom: 1em;
-    width: 5px;
-    height: 5px;
-    background-color: rgb(68, 67, 67);
-  }
-  .contenedor-logo {
-    display: flex;
   }
 
   .muesca {
     width: 115px;
+  }
+  .logo-linea {
+    display: block;
+  }
+  .logo-circulo {
+    display: block;
+  }
+
+  .titulo-principal {
+    display: flex;
+  }
+
+  .titulo-principal-mobile {
+    display: none;
   }
 }
