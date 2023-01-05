@@ -2,11 +2,9 @@
   width: 100%;
   height: 300px;
   object-fit: cover;
-  /* object-position: 50%; */
 }
 .logoContainer {
   padding: 2em 0;
-  /* border: 1px solid red; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -47,12 +45,20 @@
 .logoTitle {
   width: 40%;
 }
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .logoContainer {
+    padding: 10em 0;
+  }
+}
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .imgBanner {
     height: 400px;
   }
   .logoContainer {
+    padding: 0;
     padding-top: 18em;
     background: linear-gradient(
       270deg,
@@ -68,7 +74,7 @@
       #000000ff 100%
     );
     position: absolute;
-    top: 550px;
+    top: 540px;
   }
 }
 
@@ -93,9 +99,15 @@
       #000000ff 100%
     );
     position: absolute;
-    top: 640px;
+    top: 630px;
   }
 }
+@media (min-width: 1024px) { 
+  .logoContainer{
+    padding-top: 9.2em;
+    /* top: 700px; */
+  }
+ } 
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
@@ -118,6 +130,20 @@
       #000000ff 100%
     );
     position: absolute;
-    top: 750px;
+    top: 705px;
   }
+  @media (min-width: 1280px) { 
+    .logoContainer{
+      padding-top: 13em;
+      top: 740px;
+    }
+   } 
+ 
+  /* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+  .logoContainer{
+    padding-top: 15em;
+    top: 790px;
+  }
+ } 
 }

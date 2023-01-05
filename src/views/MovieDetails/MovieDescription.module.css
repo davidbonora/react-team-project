@@ -37,8 +37,8 @@
   font-size: 1.1rem;
   margin: 1em 1em 0.5rem 0;
 }
-.linkContainer{
-  margin: .5em 0;
+.linkContainer {
+  margin: 0.5em 0;
 }
 .linkContainer a {
   color: #b5b7b1;
@@ -58,10 +58,10 @@
 
 /* Small devices (galaxy fold) */
 @media (max-width: 280px) {
-  .rating-link {
+  /* .rating-link {
     display: flex;
     flex-wrap: wrap;
-  }
+  } */
 
   .movieInfo h1 {
     font-size: 1.8rem;
@@ -80,6 +80,8 @@
 @media (min-width: 540px) {
   .descriptionContainer {
     grid-template-columns: 30% 70%;
+
+    margin-top: 300px;
   }
 }
 
@@ -90,15 +92,14 @@
     margin: 3em;
     margin-top: 200px;
   }
-
   .movieInfo h1 {
     font-size: 3.3rem;
+    margin: 0 0 0.6em 0;
   }
 
   .movieInfo {
     margin-left: 1em;
   }
-
   .textContainer {
     margin-top: 0;
     margin-right: 2em;
@@ -150,6 +151,7 @@
     display: none;
   }
   .descriptionContainer {
+    margin-top: 1.5em;
     grid-template-columns: 50% 50%;
   }
 
