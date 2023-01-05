@@ -8,8 +8,6 @@ import Slide4 from "../assets/img/slideshow/sld-4.webp";
 import { ReactComponent as LeftArrow } from "../assets/img/slideshow/chevron-left-solid.svg";
 import { ReactComponent as RightArrow } from "../assets/img/slideshow/chevron-right-solid.svg";
 
-// import styled from "styled-components";
-
 import { useRef, useEffect, useState } from "react";
 
 function Slideshow() {
@@ -44,42 +42,40 @@ function Slideshow() {
         } else {
           setCurrentIndex(0);
         }
-      }, 2000);
-      // const transition = () => {
-      //   // Reinicia la posición del slideshow
-
-      //   slideshow.current.removeEventListener(`transitionend`, transition);
-      //   // console.log('running!');
-      //   // setCurrentSlide(currentSlide + 1)
-      //   // console.log("current index", currentIndex);
-      //   // console.log("current slide", currentSlide);
-      // };
-
-      // // EventListener para cuando acaba la animación
-      // slideshow.current.addEventListener(`transitionend`, transition);
+      }, 2500);
     }
   };
 
   const prevSlide = () => {
     if (slideshow.current.children.length > 0) {
-      slideshow.current.style.transition = `300ms ease-out all`;
-      const slideSize = slideshow.current.children[0].offsetWidth;
-      slideshow.current.style.transform = `translateX(${slideSize}px)`;
-      
       setTimeout(() => {
         const index = slideshow.current.children.length - 1;
         const lastElement = slideshow.current.children[index];
-        slideshow.current.insertBefore(lastElement, slideshow.current.firstChild);      
+        slideshow.current.insertBefore(
+          lastElement,
+          slideshow.current.firstChild
+        );
+
         slideshow.current.style.transition = `none`;
+
+        const slideSize = slideshow.current.children[0].offsetWidth;
+        slideshow.current.style.transform = `translateX(-${slideSize}px)`;
+
+        setTimeout(() => {
           slideshow.current.style.transform = `translateX(0)`;
-        }, 300);
+          slideshow.current.style.transition = `1s ease-out all`;
+        });
+        if (currentIndex >0 && currentIndex < 4) {
+          setCurrentIndex(currentIndex-1);
+        } else {
+          setCurrentIndex(3);
+        }
+      }, 2500);
     }
   };
-
   const selectedSlide = (numSlide) => {
     if (slideshow.current.children.length > 0) {
       setMoveAuto(false);
-      handleStopInterval();
       slideshow.current.style.transition = `none`;
       const slideSize = slideshow.current.children[0].offsetWidth;
       let positions = [];
@@ -109,21 +105,14 @@ function Slideshow() {
     }
   };
 
-  // Función para detener el intervalo al hacer click
-  const handleStopInterval = () => {
-    // clearInterval(intervalRef.current);
-  };
-
   // Agrupación de funciones para poder pasarlas al onClick porque react solo admite pasarle una función
   const handleClickNext = () => {
-    setMoveAuto(false)
     nextSlide();
-    // handleStopInterval();
+    setMoveAuto(false);
   };
   const handleClickPrev = () => {
-    setMoveAuto(false)
     prevSlide();
-    // handleStopInterval();
+    setMoveAuto(false);
   };
 
   // Array para generar los botones inferiores del slide
@@ -147,15 +136,6 @@ function Slideshow() {
         nextSlide();
       }
     }
-    // const interval = setInterval(() => {
-    // }, 5000);
-
-    // // Elimina el intervalo
-    // // Guarda la referencia del intervalo
-    // intervalRef.current = interval;
-
-    // // Devuelve la función que elimina el intervalo
-    // return () => clearInterval(intervalRef.current);
   });
 
   return (
