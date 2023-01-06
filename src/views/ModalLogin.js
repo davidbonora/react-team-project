@@ -1,11 +1,7 @@
 import { ModalProvider, ModalContext, ModalRoot } from "react-multi-modal";
 import ModalLoginMail from "../components/ModalLoginMail";
-import data from "../utils/user.json";
 
 function ModalLogin() {
-    let mail = data.mail;
-    console.log(mail);
-
     return (
         <ModalProvider>
             <ModalContext>
