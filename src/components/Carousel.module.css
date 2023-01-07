@@ -1,24 +1,23 @@
 .carouselbody {
   width: 85%;
-  margin-left: 10%;
+  margin-left: 8%;
   padding-bottom: 50px;
   background-color: black;
 }
 
 img {
-  /* position: relative; */
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
 h3 {
   color: white;
-  margin: 3% 3% 0 3%;
+  margin: 3% 3% 0 2%;
 }
 hr {
-  background-color: #1d1e1f;
-  width: 95%;
-  height: 3px;
-  margin-bottom: 2%;
+  background-color: #48494a;
+  width: 96%;
+  height: 2px;
+  margin-bottom: 1.5%;
   margin-left: 2%;
 }
 .iconcontainer {
@@ -29,15 +28,94 @@ hr {
   margin-top: -2%;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  
+  position: relative;
 }
 .iconcontainer2 {
-    width: 100%;
-    height: 80px;
-    border: solid 1px #1d1e1f;
-    background-color: #1d1e1f;
-    margin-top: -2%;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    
-  }
+  width: 100%;
+  height: 80px;
+  border: solid 1px #1d1e1f;
+  background-color: #1d1e1f;
+  margin-top: -2%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  position: relative;
+}
+.trapecio {
+  width: 130px;
+  height: 0px;
+  border-right: 25px solid transparent;
+  border-left: 25px solid transparent;
+  border-bottom: 20px solid black;
+  position: absolute;
+  top: 95%;
+  right: 69%;
+}
+.trapecio2 {
+  width: 130px;
+  height: 0px;
+  border-right: 25px solid transparent;
+  border-left: 25px solid transparent;
+  border-bottom: 20px solid black;
+  position: absolute;
+  top: 95%;
+  right: 35%;
+}
+.trapecio3 {
+  width: 130px;
+  height: 0px;
+  border-right: 25px solid transparent;
+  border-left: 25px solid transparent;
+  border-bottom: 20px solid black;
+  position: absolute;
+  top: 95%;
+  right: 1%;
+}
+.trapecio4 {
+  width: 130px;
+  height: 0px;
+  border-right: 25px solid transparent;
+  border-left: 25px solid transparent;
+  border-bottom: 20px solid black;
+  position: absolute;
+  top: 95%;
+  right: -32.5%;
+}
+.trapecio5 {
+  width: 130px;
+  height: 0px;
+  border-right: 25px solid transparent;
+  border-left: 25px solid transparent;
+  border-bottom: 20px solid black;
+  position: absolute;
+  top: 95%;
+  right: -66.5%;
+}
+.trapecio6 {
+  width: 130px;
+  height: 0px;
+  border-right: 25px solid transparent;
+  border-left: 25px solid transparent;
+  border-bottom: 20px solid black;
+  position: absolute;
+  top: 95%;
+  right: -100.5%;
+}
+.trapecio7 {
+  width: 130px;
+  height: 0px;
+  border-right: 25px solid transparent;
+  border-left: 25px solid transparent;
+  border-bottom: 20px solid black;
+  position: absolute;
+  top: 95%;
+  right: -134%;
+}
+.icon1 {
+  margin: 2%;
+  color: #48494a;
+}
+.icon1:hover {
+  color: white;
+  transition: all 0.3s ease-in-out;
+  filter: drop-shadow(0px 0px 7px white);
+}
