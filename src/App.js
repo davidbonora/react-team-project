@@ -1,10 +1,10 @@
 import "./App.css";
-import Cardsprincipal from "./components/Cardsprincipal";
+import Carousel from "./components/Carousel"
 
 
 function App() {
   return (
-<Cardsprincipal/>
+<Carousel/>
   );
 }
 

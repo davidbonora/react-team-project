@@ -1,0 +1,43 @@
+.carouselbody {
+  width: 85%;
+  margin-left: 10%;
+  padding-bottom: 50px;
+  background-color: black;
+}
+
+img {
+  /* position: relative; */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+h3 {
+  color: white;
+  margin: 3% 3% 0 3%;
+}
+hr {
+  background-color: #1d1e1f;
+  width: 95%;
+  height: 3px;
+  margin-bottom: 2%;
+  margin-left: 2%;
+}
+.iconcontainer {
+  width: 100%;
+  height: 60px;
+  border: solid 1px #1d1e1f;
+  background-color: #1d1e1f;
+  margin-top: -2%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  
+}
+.iconcontainer2 {
+    width: 100%;
+    height: 80px;
+    border: solid 1px #1d1e1f;
+    background-color: #1d1e1f;
+    margin-top: -2%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    
+  }
