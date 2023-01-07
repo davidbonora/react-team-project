@@ -35,7 +35,7 @@ function Cardsprincipal() {
         <Carousel.Item>
           <div>
             <img width="100%" src={img2} />
-            <div className={style.iconcontainer2}>
+            <div className={style.iconcontainer}>
               {" "}
               <FontAwesomeIcon
                 className={style.icon1}
