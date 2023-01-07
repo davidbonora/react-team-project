@@ -1,8 +1,21 @@
 body{
 background-color: black;
 }
+Carousel{
+
+}
 img{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-
+h3{
+    color: white;
+    margin: 3% 3% 0 3%;
+}
+hr{
+    background-color: gray;
+    width: 95%;
+    height: 2px;
+    margin-bottom: 5%;
+    margin-left: 3%;
+}
