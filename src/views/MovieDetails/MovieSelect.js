@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 function MovieSelect({ films }) {
   const { key } = useParams();
 
-  // set dropdown menu opened or closed by clicking on all movies
+  // abrir y cerrar el menú
   const [isOpened, setIsOpened] = useState(false);
 
   const handleOpen = () => {
@@ -15,12 +15,12 @@ function MovieSelect({ films }) {
 
   return (
     <div>
-      <div className={classes["select-container"]} onClick={handleOpen}>
-        <h3 className={classes["select-container-title"]}>
+      <div className={classes.selectContainer} onClick={handleOpen}>
+        <h3 className={classes.selectTitle}>
           ALL FILMS
           <span
             className={
-              isOpened ? classes["arrow-img-rotate"] : classes["arrow-img"]
+              isOpened ? classes.arrowImgRotate : classes.arrowImg
             }
           >
             <img
@@ -33,13 +33,13 @@ function MovieSelect({ films }) {
         <div
           className={
             isOpened
-              ? classes["link-list-dropdown"]
-              : classes["link-list-dropdown-closed"]
+              ? classes.listOpen
+              : classes.listClose
           }
         >
-          <ul className={classes["link-list"]}>
+          <ul className={classes.list}>
             {films.map((film, key) => (
-              <li className={classes["link-list-item"]} key={key}>
+              <li className={classes.listItem} key={key}>
                 <Link
                   to={`/movies/${film.id}`}
                   id={key}

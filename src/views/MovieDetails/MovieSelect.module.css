@@ -2,7 +2,7 @@
   
   /* title and after before selectors */
   
-  .select-container-title {
+  .selectTitle {
     width: 90%;
     margin: auto;
     margin-bottom: 1.7em;
@@ -19,11 +19,8 @@
     font-weight: lighter;
   }
   
-  .select-container-title>h3 {
-    font-family: 'Cabin', sans-serif;
-  }
   
-  .select-container-title::before {
+  .selectTitle::before {
     content: "";
     position: absolute;
     display: block;
@@ -36,11 +33,11 @@
     margin-left: -10px;
   }
   
-  .select-container-title:hover:before {
+  .selectTitle:hover:before {
     box-shadow: 0px 0px 4px 1px #fff;
   }
   
-  .arrow-img {
+  .arrowImg {
     position: absolute;
     right: 25px;
     height: 20px;
@@ -48,7 +45,7 @@
     cursor: pointer;
   }
   
-  .arrow-img-rotate {
+  .arrowImgRotate {
     position: absolute;
     right: 25px;
     height: 20px;
@@ -59,7 +56,7 @@
   
   /* dropdown and link list and items */
   
-  .link-list-dropdown {
+  .listOpen {
     display: block;
     width: 100%;
     margin: 0;
@@ -67,11 +64,11 @@
     z-index: 10;
   }
   
-  .link-list-dropdown-closed {
+  .listClose {
     display: none;
   }
   
-  .link-list {
+  .list {
     display: flex;
     flex-wrap: wrap;
     background: #48494a;
@@ -86,9 +83,10 @@
     overflow: scroll;
   }
   
-  .link-list-item {
+  .listItem {
     padding: 16px 30px;
     width: 100%;
+    list-style: none;
   }
   
   .link {
@@ -118,14 +116,14 @@
   
   /* Medium devices (tablets, 768px and up) */
   @media (min-width: 730px) {
-    .link-list {
+    .list {
       border-radius: 0.5rem;
       width: 90%;
       margin: auto 5%;
       column-gap: 10px;
       margin-top: 0.2em;
     }
-    .link-list-item {
+    .listItem {
       width: calc(33% - 20px);
       padding: 10px 0 10px 12px;
     }
@@ -137,7 +135,7 @@
   
   /* Large devices (desktops, 992px and up) */
   @media (min-width: 992px) {
-    .link-list {
+    .list {
       border-radius: 0.5rem;
       width: 80%;
       margin: 4px 10%;
@@ -145,12 +143,12 @@
       overflow: auto;
     }
   
-    .link-list-item {
+    .listItem {
       width: calc(25% - 28px);
       padding: 10px 0 10px 12px;
     }
   
-    .select-container-title {
+    .selectTitle {
       width: 80%;
     }
   }

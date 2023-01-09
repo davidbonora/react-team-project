@@ -1,0 +1,149 @@
+.imgBanner {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.logoContainer {
+  padding: 2em 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,
+    #00000000 0%,
+    #0000002c 5%,
+    #00000035 10%,
+    #00000042 20%,
+    #0000006b 30%,
+    #00000094 40%,
+    #000000bd 50%,
+    #000000de 60%,
+    #000000f5 70%,
+    #000000ff 100%
+  );
+  position: absolute;
+  top: 500px;
+}
+.textHeader {
+  width: 90%;
+  text-align: center;
+  margin: 0.5em 0;
+  font-size: 1.7em;
+  color: white;
+}
+.btn {
+  background-color: #f2d24e;
+  padding: 1.2em 3em;
+  border-radius: 2em;
+  margin: 0.5rem;
+}
+.aBtn {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+.logoTitle {
+  width: 40%;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .logoContainer {
+    padding: 10em 0;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .imgBanner {
+    height: 400px;
+  }
+  .logoContainer {
+    padding: 0;
+    padding-top: 18em;
+    background: linear-gradient(
+      270deg,
+      #00000000 0%,
+      #0000000a 16%,
+      #00000021 29%,
+      #00000042 41%,
+      #0000006b 51%,
+      #00000094 61%,
+      #000000bd 70%,
+      #000000de 79%,
+      #000000f5 89%,
+      #000000ff 100%
+    );
+    position: absolute;
+    top: 540px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .imgBanner {
+    height: auto;
+  }
+  .logoContainer {
+    padding-top: 8em;
+    background: linear-gradient(
+      270deg,
+      #00000000 0%,
+      #0000000a 16%,
+      #00000021 29%,
+      #00000042 41%,
+      #0000006b 51%,
+      #00000094 61%,
+      #000000bd 70%,
+      #000000de 79%,
+      #000000f5 89%,
+      #000000ff 100%
+    );
+    position: absolute;
+    top: 630px;
+  }
+}
+@media (min-width: 1024px) { 
+  .logoContainer{
+    padding-top: 9.2em;
+    /* top: 700px; */
+  }
+ } 
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .imgBanner {
+    height: auto;
+  }
+  .logoContainer {
+    padding-top: 12em;
+    background: linear-gradient(
+      270deg,
+      #00000000 0%,
+      #0000000a 16%,
+      #00000021 29%,
+      #00000042 41%,
+      #0000006b 51%,
+      #00000094 61%,
+      #000000bd 70%,
+      #000000de 79%,
+      #000000f5 89%,
+      #000000ff 100%
+    );
+    position: absolute;
+    top: 705px;
+  }
+  @media (min-width: 1280px) { 
+    .logoContainer{
+      padding-top: 13em;
+      top: 740px;
+    }
+   } 
+ 
+  /* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+  .logoContainer{
+    padding-top: 15em;
+    top: 790px;
+  }
+ } 
+}

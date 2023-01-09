@@ -1,65 +1,94 @@
-.imgBanner {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+/* main movie banner with gradient */
+.bannerContainer {
+  position: relative;
+  transition: opacity 250ms, padding-bottom 250ms;
+  margin-bottom: 14em;
 }
-.logoContainer {
-  padding: 2em 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+
+.bannerContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.bannerContainer .gradientBg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
   background: linear-gradient(
     180deg,
     #00000000 0%,
-    #0000002c 5%,
-    #00000035 10%,
-    #00000042 20%,
-    #0000006b 30%,
-    #00000094 40%,
-    #000000bd 50%,
-    #000000de 60%,
-    #000000f5 70%,
+    #0000000a 16%,
+    #00000021 29%,
+    #00000042 41%,
+    #0000006b 51%,
+    #00000094 61%,
+    #000000bd 70%,
+    #000000de 79%,
+    #000000f5 89%,
     #000000ff 100%
   );
-  position: absolute;
-  top: 500px;
 }
-.textHeader {
-  width: 90%;
+
+.bannerTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bannerTitle h2 {
+  color: #fff;
+  font-size: 1.7rem;
   text-align: center;
-  margin: 0.5em 0;
-  font-size: 1.7em;
-  color: white;
+  line-height: 1.2;
+  z-index: 5;
+  position: absolute;
+  bottom: 0;
+  margin-left: 1.3em;
+  margin-right: 1.3em;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 145px;
+  max-height: 73px;
+  z-index: 5;
+  position: absolute;
+  bottom: 85px;
+  /* margin-bottom: 1em; */
+}
+
+/* yellow button stream on code+ */
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .btn {
-  background-color: #f2d24e;
-  padding: 1.2em 3em;
-  border-radius: 2em;
-  margin: 0.5rem;
-}
-.aBtn {
-  color: black;
-  text-decoration: none;
+  background-color: #fade4b;
+  padding: 1.1em 2.1em;
+  border-radius: 1.8rem;
   font-weight: bold;
+  font-size: 1.1rem;
+  z-index: 5;
+  position: absolute;
+  bottom: -70px;
 }
-.logoTitle {
-  width: 40%;
-}
+
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+@media (min-width: 540px) {
   .logoContainer {
-    padding: 10em 0;
+    bottom: 55px;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .imgBanner {
-    height: 400px;
-  }
-  .logoContainer {
-    padding: 0;
-    padding-top: 18em;
+  .bannerContainer .gradientBg {
     background: linear-gradient(
       270deg,
       #00000000 0%,
@@ -73,77 +102,83 @@
       #000000f5 89%,
       #000000ff 100%
     );
-    position: absolute;
-    top: 540px;
+  }
+
+  .bannerContainer {
+    margin-bottom: 12em;
+  }
+
+  .bannerTitle h2 {
+    font-size: 2rem;
+    bottom: -40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn {
+    bottom: -110px;
+  }
+
+  .logoContainer {
+    max-width: 199px;
+    max-height: 100px;
+    bottom: 20px;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .imgBanner {
-    height: auto;
+  .bannerContainer {
+    margin-bottom: 1em;
   }
+
+  .bannerTitle h2 {
+    left: 80px;
+    bottom: 120px;
+    width: 30%;
+  }
+
+  .btn {
+    bottom: 60px;
+    left: 130px;
+  }
+
   .logoContainer {
-    padding-top: 8em;
-    background: linear-gradient(
-      270deg,
-      #00000000 0%,
-      #0000000a 16%,
-      #00000021 29%,
-      #00000042 41%,
-      #0000006b 51%,
-      #00000094 61%,
-      #000000bd 70%,
-      #000000de 79%,
-      #000000f5 89%,
-      #000000ff 100%
-    );
-    position: absolute;
-    top: 630px;
+    left: 150px;
+    bottom: 240px;
+
   }
 }
-@media (min-width: 1024px) { 
-  .logoContainer{
-    padding-top: 9.2em;
-    /* top: 700px; */
-  }
- } 
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  .imgBanner {
-    height: auto;
+  .bannerTitle h2 {
+    width: 35%;
+    font-size: 2.1rem;
   }
+
+  .btn {
+    bottom: 60px;
+    left: 190px;
+  }
+
   .logoContainer {
-    padding-top: 12em;
-    background: linear-gradient(
-      270deg,
-      #00000000 0%,
-      #0000000a 16%,
-      #00000021 29%,
-      #00000042 41%,
-      #0000006b 51%,
-      #00000094 61%,
-      #000000bd 70%,
-      #000000de 79%,
-      #000000f5 89%,
-      #000000ff 100%
-    );
-    position: absolute;
-    top: 705px;
+    left: 190px;
   }
-  @media (min-width: 1280px) { 
-    .logoContainer{
-      padding-top: 13em;
-      top: 740px;
-    }
-   } 
- 
-  /* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) { 
-  .logoContainer{
-    padding-top: 15em;
-    top: 790px;
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .bannerContainer {
+    margin-left: 5%;
+    margin-right: 5%;
   }
- } 
+
+  .btn {
+    bottom: 60px;
+  }
+
+  .logoContainer {
+    left: 200px;
+  }
 }
